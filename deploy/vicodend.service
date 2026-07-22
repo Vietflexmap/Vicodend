@@ -1,0 +1,24 @@
+[Unit]
+Description=Vicodend — VICODE Backend
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/vicodend
+EnvironmentFile=/opt/vicodend/.env
+ExecStart=/usr/bin/node src/server.js
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+ReadWritePaths=/opt/vicodend/data
+
+[Install]
+WantedBy=multi-user.target
