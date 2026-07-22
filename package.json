@@ -1,0 +1,9 @@
+{
+  "name": "vicodend",
+  "version": "0.1.0",
+  "description": "VICODE backend: self-hosted privacy and integrity gateway for embeddable web applications",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {"start": "node src/server.js", "test": "node --test"},
+  "engines": {"node": ">=20"}
+}
